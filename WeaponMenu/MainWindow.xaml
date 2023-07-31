@@ -5,8 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeaponMenu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="94"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <TextBlock Grid.Row="0" Text="Pistol" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Text="Rifle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Text="Sniper Rifle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Text="SMG" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="4" Text="Minigun" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="3" VerticalAlignment="Center">
+            <CheckBox Content="Sight"/>
+            <CheckBox Content="Silincer"/>
+            <CheckBox Content="Double Magazine"/>
+            <CheckBox Content="Weapon Butt"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="1">
+            <CheckBox Content="Under-Barrel Grenade Launcher"/>
+            <CheckBox Content="Multi-shot Accessory Underbarrel Launcher"/>
+            <CheckBox Content="Sight"/>
+            <CheckBox Content="Silincer"/>
+            <CheckBox Content="Double Magazine"/>
+            <CheckBox Content="Weapon Butt"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="3" VerticalAlignment="Center">
+            <CheckBox Content="Sight"/>
+            <CheckBox Content="Silincer"/>
+            <CheckBox Content="Weapon Butt"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center">
+            <CheckBox Content="Double Magazine"/>
+            <CheckBox Content="Silincer"/>
+            <CheckBox Content="Weapon Butt"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="2" Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" Margin="3" VerticalAlignment="Center">
+            <CheckBox Content="Double Magazine"/>
+            <CheckBox Content="Weapon Butt"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="2"  Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="50"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="20"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="35"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="90"/>
+        </StackPanel>
     </Grid>
 </Window>
