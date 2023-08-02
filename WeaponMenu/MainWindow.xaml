@@ -34,10 +34,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="2" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Damage}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Accuracy}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Recoil}"/>
+                <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding RateOfFire}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="1">
@@ -49,7 +49,7 @@
             <CheckBox Content="Weapon Butt"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="1">
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="1" VerticalAlignment="Center">
             <ProgressBar  Height="10" Width="250" Margin="5"/>
             <ProgressBar  Height="10" Width="250" Margin="5"/>
             <ProgressBar  Height="10" Width="250" Margin="5"/>
@@ -88,10 +88,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="4" Grid.Column="2"  Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="50"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="20"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="35"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="90"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
+            <ProgressBar  Height="10" Width="250" Margin="5"/>
         </StackPanel>
     </Grid>
 </Window>
