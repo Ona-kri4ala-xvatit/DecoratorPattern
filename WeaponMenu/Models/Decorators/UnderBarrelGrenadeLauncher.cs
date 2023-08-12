@@ -1,6 +1,6 @@
 ﻿namespace WeaponMenu.Models.Decorators
 {
-    public class SightDecorator
+    public class UnderBarrelGrenadeLauncher
     {
 
     }

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WeaponMenu"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,6 +18,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
@@ -25,73 +27,28 @@
         <TextBlock Grid.Row="2" Text="Sniper Rifle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="3" Text="SMG" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="4" Text="Minigun" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        
         <StackPanel Grid.Row="0" Grid.Column="1" Margin="3" VerticalAlignment="Center">
-            <CheckBox Content="Sight"/>
-            <CheckBox Content="Silincer"/>
-            <CheckBox Content="Double Magazine"/>
-            <CheckBox Content="Weapon Butt"/>
+            <CheckBox Content="Sight" Checked="SightCheckBox_Checked" Unchecked="SightCheckBox_Unchecked"/>
+            <CheckBox Content="Silincer" Checked="SilincerCheckBox_Checked" Unchecked="SilincerCheckBox_Unchecked"/>
+            <CheckBox Content="Double Magazine" Checked="DoubleMagazineCheckBox_Checked" Unchecked="DoubleMagazineCheckBox_Unchecked"/>
+            <CheckBox Content="Weapon Butt" Checked="WeaponButtCheckBox_Checked" Unchecked="WeaponButtCheckBox_Unchecked"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <TextBlock Text="Damage"/>
+            <TextBlock Text="Accuracy"/>
+            <TextBlock Text="Recoil"/>
+            <TextBlock Text="Rate Of Fire"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="0" Grid.Column="3" Margin="1">
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Damage}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Accuracy}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Recoil}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.RateOfFire}"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="0" Grid.Column="2" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Damage}"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Accuracy}"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Recoil}"/>
-                <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding RateOfFire}"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="1">
-            <CheckBox Content="Under-Barrel Grenade Launcher"/>
-            <CheckBox Content="Multi-shot Accessory Underbarrel Launcher"/>
-            <CheckBox Content="Sight"/>
-            <CheckBox Content="Silincer"/>
-            <CheckBox Content="Double Magazine"/>
-            <CheckBox Content="Weapon Butt"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="1" VerticalAlignment="Center">
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="1" Margin="3" VerticalAlignment="Center">
-            <CheckBox Content="Sight"/>
-            <CheckBox Content="Silincer"/>
-            <CheckBox Content="Weapon Butt"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="2" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center">
-            <CheckBox Content="Double Magazine"/>
-            <CheckBox Content="Silincer"/>
-            <CheckBox Content="Weapon Butt"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="3" Grid.Column="2" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="4" Grid.Column="1" Margin="3" VerticalAlignment="Center">
-            <CheckBox Content="Double Magazine"/>
-            <CheckBox Content="Weapon Butt"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="4" Grid.Column="2"  Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-            <ProgressBar  Height="10" Width="250" Margin="5"/>
-        </StackPanel>
+        
     </Grid>
 </Window>
