@@ -5,7 +5,7 @@ namespace WeaponMenu.Models.Decorators;
 
 public class DoubleMagazine : WeaponUpdate
 {
-    public DoubleMagazine(Weapon wrapper) : base(wrapper)
+    public DoubleMagazine(Weapon wrapper = null)// : base(wrapper)
     {
         this.rateOfFire = 5;
     }

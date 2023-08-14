@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WeaponMenu"
+        xmlns:viewmodels="clr-namespace:WeaponMenu.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     
@@ -41,14 +41,13 @@
             <TextBlock Text="Recoil"/>
             <TextBlock Text="Rate Of Fire"/>
         </StackPanel>
-        
+
         <StackPanel Grid.Row="0" Grid.Column="3" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Damage}"/>
+            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Damage}" />
             <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Accuracy}"/>
             <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Recoil}"/>
             <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.RateOfFire}"/>
         </StackPanel>
 
-        
     </Grid>
 </Window>
