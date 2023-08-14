@@ -8,7 +8,7 @@ public class Sight : WeaponUpdate
     public Sight(Weapon weapon = null) //: base(weapon)
     {
         this.damage = 5;
-        this.accuracy = 20;
+        this.accuracy = 10;
     }
 }
 
