@@ -5,9 +5,9 @@ namespace WeaponMenu.Models.Decorators
 {
     public class WeaponButt : WeaponUpdate
     {
-        public WeaponButt(Weapon wreapper = null)// : base(wreapper)
+        public WeaponButt()
         {
-            this.recoil = -10;
+            this.recoil = -5;
             this.accuracy = 5;
         }
     }

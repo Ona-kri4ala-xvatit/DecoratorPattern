@@ -4,32 +4,27 @@ namespace WeaponMenu.Models.Decorators.Base
 {
     public class WeaponUpdate : Weapon
     {
-        private Weapon wrapper;
+        private Weapon weapon;
 
         protected double damage;
         protected double accuracy;
         protected double recoil;
         protected double rateOfFire;
 
-        //public WeaponUpdate(Weapon wrapper)
-        //{
-        //    this.wrapper = wrapper;
-        //}
+        public override double Damage { get => this.weapon.Damage + damage; }
+        public override double Accuracy { get => this.weapon.Accuracy + accuracy;}
+        public override double Recoil { get => this.weapon.Recoil + recoil; }
+        public override double RateOfFire { get => this.weapon.RateOfFire + rateOfFire; }
 
-        public override double Damage { get => this.wrapper.Damage + damage; }
-        public override double Accuracy { get => this.wrapper.Accuracy + accuracy;}
-        public override double Recoil { get => this.wrapper.Recoil + recoil; }
-        public override double RateOfFire { get => this.wrapper.RateOfFire + rateOfFire; }
-
-        public Weapon SetUpdate(Weapon wrapper)
+        public Weapon SetUpdate(Weapon weapon)
         {
-            this.wrapper = wrapper;
+            this.weapon = weapon;
             return this;
         }
 
         public Weapon RemoveUpdate() 
         {
-            return wrapper; 
+            return weapon;   
         }
     }
 }

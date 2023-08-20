@@ -5,10 +5,10 @@ namespace WeaponMenu.Models.Decorators;
 
 public class Sight : WeaponUpdate
 {
-    public Sight(Weapon weapon = null) //: base(weapon)
+    public Sight()
     {
         this.damage = 5;
-        this.accuracy = 10;
+        this.accuracy = 15;
     }
 }
 

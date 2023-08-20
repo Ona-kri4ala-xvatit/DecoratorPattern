@@ -6,10 +6,10 @@ namespace WeaponMenu.Models.Weapons
     {
         public Rifle()
         {
-            this.Damage = 65;
-            this.Accuracy = 49;
-            this.Recoil = 73;
-            this.RateOfFire = 70;
+            this.Damage = 45;
+            this.Accuracy = 31;
+            this.Recoil = 64;
+            this.RateOfFire = 57;
         }
     }
 }

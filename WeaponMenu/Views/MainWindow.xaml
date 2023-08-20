@@ -5,49 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="clr-namespace:WeaponMenu.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="220" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     
     <Grid ShowGridLines="True">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="94"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Pistol" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Text="Rifle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="2" Text="Sniper Rifle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Text="SMG" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="4" Text="Minigun" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        
-        <StackPanel Grid.Row="0" Grid.Column="1" Margin="3" VerticalAlignment="Center">
-            <CheckBox Content="Sight" Checked="SightCheckBox_Checked" Unchecked="SightCheckBox_Unchecked"/>
-            <CheckBox Content="Silincer" Checked="SilincerCheckBox_Checked" Unchecked="SilincerCheckBox_Unchecked"/>
-            <CheckBox Content="Double Magazine" Checked="DoubleMagazineCheckBox_Checked" Unchecked="DoubleMagazineCheckBox_Unchecked"/>
-            <CheckBox Content="Weapon Butt" Checked="WeaponButtCheckBox_Checked" Unchecked="WeaponButtCheckBox_Unchecked"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <TextBlock Text="Damage"/>
-            <TextBlock Text="Accuracy"/>
-            <TextBlock Text="Recoil"/>
-            <TextBlock Text="Rate Of Fire"/>
+        <TextBlock Text="Rifle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox Padding="10" VerticalContentAlignment="Center" Content="Sight" 
+                      Checked="SightCheckBox_Checked" Unchecked="SightCheckBox_Unchecked"/>
+            <CheckBox Padding="10" VerticalContentAlignment="Center" Content="Silincer" 
+                      Checked="SilincerCheckBox_Checked" Unchecked="SilincerCheckBox_Unchecked"/>
+            <CheckBox Padding="10" VerticalContentAlignment="Center" Content="Double Magazine" 
+                      Checked="DoubleMagazineCheckBox_Checked" Unchecked="DoubleMagazineCheckBox_Unchecked"/>
+            <CheckBox Padding="10" VerticalContentAlignment="Center" Content="Weapon Butt" 
+                      Checked="WeaponButtCheckBox_Checked" Unchecked="WeaponButtCheckBox_Unchecked"/>
+            <CheckBox Padding="10" VerticalContentAlignment="Center" Content="Multi-shot Accessory Underbarrel Launcher" 
+                      Checked="MultiShotAccessory_Checked" Unchecked="MultiShotAccessory_Unchecked"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="0" Grid.Column="3" Margin="1">
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Damage}" />
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Accuracy}"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.Recoil}"/>
-            <ProgressBar  Height="10" Width="250" Margin="5" Value="{Binding Pistol.RateOfFire}"/>
+        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Padding="15" Text="Damage"/>
+            <TextBlock Padding="15" Text="Accuracy"/>
+            <TextBlock Padding="15" Text="Recoil"/>
+            <TextBlock Padding="15" Text="Rate Of Fire"/>
         </StackPanel>
 
+        <StackPanel Grid.Column="3" VerticalAlignment="Center">
+            <ProgressBar Height="20" Width="280" Margin="12" Value="{Binding Rifle.Damage}"/>
+            <ProgressBar Height="20" Width="280" Margin="12" Value="{Binding Rifle.Accuracy}"/>
+            <ProgressBar Height="20" Width="280" Margin="12" Value="{Binding Rifle.Recoil}"/>
+            <ProgressBar Height="20" Width="280" Margin="12" Value="{Binding Rifle.RateOfFire}"/>
+        </StackPanel>
     </Grid>
 </Window>

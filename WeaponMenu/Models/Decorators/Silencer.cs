@@ -5,10 +5,10 @@ namespace WeaponMenu.Models.Decorators
 {
     public class Silencer : WeaponUpdate
     {
-        public Silencer(Weapon wrapper = null)// : base(wrapper)
+        public Silencer()
         {
-            this.accuracy = 5;
-            this.rateOfFire = -1;
+            this.accuracy = 20;
+            this.rateOfFire = -10;
         }
     }
 }
